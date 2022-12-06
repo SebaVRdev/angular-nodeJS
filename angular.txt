@@ -1,0 +1,14 @@
+Una vez realiado el backen en su mayoria procedemos 
+a iniciar el proyecto de angular en la carpeta padre
+y inciamos con el comando
+ng new nombre-carpeta
+
+Creamos los componentes
+ng g component components/about
+ng g component components/projects
+ng g component components/create
+ng g component components/contact
+
+en /assets creamos una carpeta para los ficheros de los estilos
+para que funcionen esos estilos, en nuestro fichero de angular.json
+en el array de styles tenemos que agregar la que creamos

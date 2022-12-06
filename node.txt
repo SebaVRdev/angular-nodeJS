@@ -1,0 +1,27 @@
+en la carpeta donde queremos almacenar el 
+backend vamos a iniciar el proyecto de node con 
+npm init...
+Instalacion de dependencias
+
+Framework para trabajar con el protocolo HTTP
+podemos definir rutas, tener sistema de rutas, peticiones HTTP
+crear acciones y metodos
+npm install express --save (--save guarda la dependencia en el proyecto actual)
+
+Libreria para convertir las peticiones que hacemos al backen a un objeto JSON
+usado por javascript
+npm install body-parsert --save
+
+Subir archivos a nuestro backend, y usar el protocolo file
+para recoger ficheros y guardarlos en una carpeta de nuestro servidor
+importante para trabajar con imagenes y otros archivos
+npm install connect-multiparty --save
+
+Libreria que es un ORM, que permite obtener una serie de metodos
+a la hora de trabajar con MongoDB, podremos crear los modelos
+identidades
+npm install mongoose --save
+
+Ejecutar el servidor de javascript, cuando haya cambio en el codigo, 
+automaticamente se refresque el servidor
+npm install nodemon --save-dev (-dev Dependencia solo funciona de desarrollo o de forma local)

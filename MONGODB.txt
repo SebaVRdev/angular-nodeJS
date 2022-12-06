@@ -1,0 +1,8 @@
+No tenemos un lenguaje SQL, ya que usamos javaScript para hacer todas las 
+consultas.
+Generalmente no existen relaciones entre los datos, aun que si se pueden simular
+No tendremos tablas, solo tendremos colecciones de documentos, que seran objetos
+JSON O BSON (binaryJSON) Sera una base de datos con distintas colecciones
+en las cuales tendremos documentos guardados
+MongoDB los almacena como binaryJSON ya que son mucho mas rapido al momento de hacer
+operaciones con los datos.

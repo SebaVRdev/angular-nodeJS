@@ -1,0 +1,22 @@
+<!-- Creamos cabecera -->
+<header>
+  <ul>
+    <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']">Sobre mi</a></li>
+    <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['active']">Proyectos</a></li>
+    <li id ="logo"><a href="#">SR</a></li>
+    <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['active']">Crear proyecto</a></li>
+    <li><a [routerLink]="['/contacto']" [routerLinkActive]="['active']">Contacto</a></li>
+  </ul>
+</header>
+
+<!-- Section donde ira el contenido de la web -->
+<section id="content">
+  <!-- Usamos router outlet para disparar las rutas -->
+  <router-outlet></router-outlet>
+</section>
+
+<!-- Parte final de la web -->
+<footer>
+  Pagina creada por Sebastian Valenzuela Ramirez &copy; 
+</footer>
+

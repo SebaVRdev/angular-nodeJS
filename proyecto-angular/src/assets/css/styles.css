@@ -1,0 +1,280 @@
+/* IMPORTAMOS LAS FUENTES CUSTOM*/
+@font-face {
+    font-family: "yanone";
+    src: url('./fonts/yanone.ttf');
+}
+@font-face {
+    font-family: "finger";
+    src: url('./fonts/finger.ttf');
+}
+@font-face {
+    font-family: "titilium";
+    src: url('./fonts/titilium.ttf');
+}
+
+/* ESTILOS GENERALES */
+*{
+    /* Controlar 100% los tamañós exteriores y interiores */
+    margin: 0px; 
+    padding: 0px;
+}
+
+body{
+    font-family: "yanone", Arial, Helvetica;
+    font-size: 20px;
+    background: url("../img/pattern.png"); /* Le damos una imagen como imagenm principal () es un patron */
+    background-attachment: fixed;/* Cuando hagamos scroll, no sentir que nos estamos deslizando */
+}
+
+/* Creamos clase para limpiar los flotados entre los distintos elementos */
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/* BARRA DE NAVEGACION HEADER*/
+header {
+    width: 100%; /* Ocupar todo el ancho de la pagina */
+    height: 90px; /* altura */
+    background: rgba(53, 103, 164, 0.8);
+    position: fixed; /* Con esto se agranda al 100% de la pagina y cuando bajamos la navegacion nos sigue */
+    display: block; /* Actue en bloque */
+    text-transform:  uppercase; /* Transformamos todo el texto en mayuscula */
+}
+
+/* Modificamos los elementos del header, especificamenre los ul */
+header ul{
+    display: block;
+    width: 40%;
+    height: inherit; /* la altura sera heredada del padre */
+    margin: 0px auto;
+    margin-top: -3px;
+}
+
+/* Modificamos los elementos li */
+header ul li{
+    display: inline-block; /* un elemento al lado del otro */
+    margin: 0px auto;
+    text-align: center;
+    line-height: 88px;
+}
+header a{
+    display: block;
+    padding-right: 20px; /* Separar cada uno del otro */
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+/* Cuando pasemos por encima de los elementos a */
+header a:hover, 
+.active{ /* Ademas creamos la clase active que se la damos cuando estemos en esa pagina */
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* LOGO */
+#logo{
+    font-family: "finger";
+    font-size: 30px;
+}
+
+#logo a{
+    transition: color 500ms,transform 500ms;
+}
+
+/* el logo no lo queremos con hover */
+header #logo a:hover {
+    background: transparent;
+    color: black; /* Lo ponemos color negro */
+    transform: scale(1.50,1.50); /* Agrandamos el logo un poco */
+}
+
+
+/* Contenedor principal */
+#content{
+    min-height: 600px; /* Tamañó minimo de 400px */
+    width: 88%; /* ancho */
+    margin: 0 auto; /* Centramos el elemento */
+    box-shadow: 0px 0px 40px black;
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 120px; /* debe calzar con la altura del header para que quede por abajo */
+}
+
+
+/* footer */
+footer{
+    width: 75%;
+    margin: 0px auto; /* centramos */
+    padding-top: 15px; /* Lo separamos del borde superior */
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Maquetar about */
+#title{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center; /* Centramos texto */
+    margin-bottom: 70px;/* Lo separamos de lo de abajo */
+    margin-top: 20px;
+}
+
+/* Estilos al h1 especifico del contenedor title */
+#title h1{
+    font-family: "finger";
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;/* efecto de borde abajo de la letra */
+    padding-bottom: 5px;
+}  
+
+#title h2{
+    font-size: 25px;
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Editamos article */
+article.about{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+/* h2 especifico del about */
+.about h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.about p{
+    padding-top: 20px;
+    padding-bottom: 30px; /* separar de abajo */
+    text-align: justify; /* ordena el texto */
+}
+
+/* Seccion con formulario */
+.container{
+    padding: 50px; /* Lo separamos del borde */
+    padding-top: 10px;
+}
+
+/* Modificamos el h2 dentro del container */
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Maquetacion de formulario de forma general, cualquier formulario que se haga en esta pagina se veria igual */
+form{
+    width: 80%; /* Le damos un ancho del 50% de la pagina */
+}
+
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px; /* Separamos de lo de arriba */
+    margin-bottom: 5px; /* Separarlos del input */
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+    width: 40%;
+    padding: 5px;
+}
+
+/* Estilos al boton del formulario */
+form button,
+form input[type="submit"]{
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+    background: rgba(53, 103, 164, 1);
+    border: 1px solid rgba(13, 67, 133, 1);
+    cursor: pointer;
+}
+
+/* Hover del button */
+form button:hover,
+form input[type="submit"]:hover{
+    background: rgba(53, 103, 164, 0.8);
+    border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Estilos de los soan de validacion */
+.form_error{
+    padding: 3px;
+    font-size: 15px;
+    background: red;
+    color: white;
+    margin-left: 5px;
+}
+
+/* Estilo al mensaje */
+.message{
+    width: 50%;
+    padding: 5px;
+    border: 1pc solid #eee;
+}
+
+.success{
+    background: green;
+    color: white;
+}
+.message a{
+    color: white;
+}
+
+.failed{
+    background: red;
+    color: white;
+}
+
+/* Pagina de proyectos */
+.project{
+    list-style: none; /* Sacamos los puntos de la lista */
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;/* Centramos el texto */
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.project .image{
+    width: 100%;
+    height: 200px;
+    overflow: hidden; /* Lo que sobre salga se recorta */
+}
+
+.project img{
+    width: 100%;
+}
+
+@media(max-width:700px){
+    head {flex-direction:column}
+    ul {padding: 10px 0px}
+}
+
+.project a{
+    text-decoration: none;
+    color: black;
+}

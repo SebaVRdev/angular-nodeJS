@@ -1,0 +1,10 @@
+Modelo representa a un documento de una coleccion de la base de datos,
+creamos un nuevo modelo dentro de la base de datos
+
+MVC (MODELO VISTA CONTROLADOR)
+Organiza la arquitectura de nuestra aplicacion, ya que es un patron de diseño
+de software para separar la logica de negocio de la interfaz del usuario.
+ES UNO DE LOS PATRONES DE DISEÑÓ MAS USADOS EN LA WEB.
+-Facilita la mantebilidiad del codigo.
+-Saber donde esta todo
+-Ayuda a la escalabilidad de la web en desarrollo
